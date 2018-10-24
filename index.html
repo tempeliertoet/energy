@@ -2,44 +2,37 @@
   <head>
     <link rel="icon" href="energy.ico" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css" />
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <style>
+    .ct-series-a .ct-bar {
+        stroke: red;
+        stroke-width: 20px;
+    }
+    </style>
   </head>
   <body>
     <h1>Energy</h1>
-    <canvas id="energyChart" width="400" height="400"></canvas>
+    <div id="energyChart" style="width: 600;height: 400;"></div>
     <script>
+        var solarYields;
       $(document).ready(function(){
-        var ctx = $("#energyChart");
-        var myChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ["2018-01-01", "2018-02-01", "2018-03-01", "2018-04-01", "2018-05-01", "2018-06-01", "2018-07-01", "2018-08-01", "2018-09-01"],
-                datasets: [{
-                    label: 'kWh',
-                    data: [102, 354, 344, 517, 744, 614,780, 621, 541],
-                    backgroundColor: [
-                        'rgba(255, 99, 132,  1',
-                        'rgba(54, 162, 235,  1',
-                        'rgba(255, 206, 86,  1',
-                        'rgba(75, 192, 192,  1',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)',
-                        'rgba(255, 0, 0,  1',
-                        'rgba(1, 137, 42, 1)',
-                        'rgba(137, 1, 130, 1)'
-                    ]
-                }]
-            },
-            options: {
-                scales: {
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero:true
-                        }
-                    }]
-                },
-                responsive: false
-            }
+        const selectedYear = moment().year();
+        const getSolarYield = async () => { 
+            await $.getJSON("solaryield.json", function(json) {
+                solarYieldList = json.filter((solarYield) => {
+                    return moment(solarYield.month, "YYYY-MM-DD").year() === selectedYear;
+                });
+            });
+            return 'done';
+        };
+
+        getSolarYield().then(() => {
+            new Chartist.Bar('#energyChart', {
+                labels: solarYieldList.map((solarYield) => solarYield.month),
+                series: [solarYieldList.map((solarYield) => solarYield.kwh)]
+            });
         });
       });
      </script>
