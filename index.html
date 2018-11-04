@@ -36,17 +36,25 @@
                             <v-card dark color="grey darken-1">
                                 <v-card-text class="px-0">Zonnepanelen</v-card-text>
                             </v-card>
-                            <chartist :data="chartData" height="300"></chartist>
+                            <chartist :data="solarYieldChartData" height="300" id="solarYieldChart"></chartist>
                         </v-flex>
                         <v-flex xs12 sm12 md12 lg4 xl4>
                             <v-card dark color="grey darken-1">
                                 <v-card-text class="px-0">Electriciteit</v-card-text>
                             </v-card>
+                            <chartist :data="electricityChartData" height="300" id="electricityChart"></chartist>
                         </v-flex>
                         <v-flex xs12 sm12 md12 lg4 xl4>
                             <v-card dark color="grey darken-1">
                                 <v-card-text class="px-0">Gas</v-card-text>
                             </v-card>
+                            <chartist :data="gasChartData" height="300" id="gasChart"></chartist>
+                        </v-flex>
+                        <v-flex xs12 sm12 md12 lg4 xl4>
+                            <v-card dark color="grey darken-1">
+                                <v-card-text class="px-0">Water</v-card-text>
+                            </v-card>
+                            <chartist :data="waterChartData" height="300" id="waterChart"></chartist>
                         </v-flex>
                     </v-layout>
                 </v-container>
@@ -57,7 +65,7 @@
           </v-app>
     </div>
     <script type="text/x-template" id="chart-template">
-        <div id="chart"></div>
+        <div :id="id"></div>
     </script>
     <script src="app.js"></script>
   </body>

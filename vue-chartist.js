@@ -1,14 +1,14 @@
 Vue.component('chartist', {
     
     mounted: function () {
-        this.chart = new Chartist.Bar('#chart', {
-            labels: this.data.labels,
-            series: this.data.series
-        }, { height: this.height });
+        this.$nextTick(function () {
+            this.chart = new Chartist.Bar('#' + this.id, this.data, { height: this.height });
+        });
     },
     props: {
         data: { type: Object },
-        height: { type: Number }
+        height: { type: Number },
+        id: { type: String },
     },
     template: '#chart-template',
     watch: {
