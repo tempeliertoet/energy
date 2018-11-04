@@ -54,7 +54,6 @@ var app = new Vue({
                 var total = currentElement.total + (solarYieldMonth ? solarYieldMonth.total : 0);
                 return { month: currentElement.month, total: total };
             });
-            output.splice(-1,1);
             this.energyData.electricity = output;
         },
         calculateMonthlyTotals: function(type){
