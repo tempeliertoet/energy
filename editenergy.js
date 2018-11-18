@@ -50,7 +50,7 @@ async function updateFile() {
             content: btoa(content),
             sha: sha
         };
-        await axios.put('https://api.github.com/repos/tempeliertoet/energy/contents/testfile.txt', data, getAuthentication());
+        await axios.put('https://api.github.com/repos/tempeliertoet/energy/contents/energy.json', data, getAuthentication());
     }
     catch (error) {
         console.error(error);
