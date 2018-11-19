@@ -6,25 +6,19 @@ var app = new Vue({
         sha: null
     },
     computed: {
-        solarYieldChartData: function(){
-            return this.getChartData('solarYield');
-        }
-    },
-    methods: {
-        getApiKey(){
-            return localStorage.getItem('apikey');
-        },
-        getAuthentication(){
+        authentication: function(){
             return {
                 auth: {
                     username: 'tempeliertoet',
-                    password: this.getApiKey()
+                    password: this.apiKey
                 }
             };
-        },
+        }
+    },
+    methods: {
         async getFileInfo() {
             try {
-                const response = await axios.get('https://api.github.com/repos/tempeliertoet/energy/contents/energy.json', this.getAuthentication());
+                const response = await axios.get('https://api.github.com/repos/tempeliertoet/energy/contents/energy.json', this.authentication);
                 return response.data;
             }
             catch (error) {
@@ -38,7 +32,7 @@ var app = new Vue({
                     content: btoa(this.fileContent),
                     sha: this.sha
                 };
-                const response = await axios.put('https://api.github.com/repos/tempeliertoet/energy/contents/energy.json', data, this.getAuthentication());
+                const response = await axios.put('https://api.github.com/repos/tempeliertoet/energy/contents/energy.json', data, this.authentication);
                 this.sha = response.data.content.sha;
             }
             catch (error) {
@@ -47,7 +41,7 @@ var app = new Vue({
         }
     },
     async created() {
-        var apiKey = this.getApiKey();
+        var apiKey = localStorage.getItem('apikey');;
         if(!apiKey){
             apiKey = window.prompt("ApiKey");
             localStorage.setItem('apikey', apiKey);
