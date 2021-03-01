@@ -59,11 +59,13 @@ var app = new Vue({
         calculateMonthlyTotals: function(type){
             var data = this.energyData[type];
             var output = data.map(function(item, index){ 
+                var currentElement = data[index];
                 var nextElement = data[index+1];
                 if(!nextElement) return null;
                 var newElement = {};
                 newElement.month = nextElement.month;
-                newElement.total = (nextElement.total - data[index].total);
+                var currentElementTotal = currentElement.newtotal ? currentElement.newtotal : currentElement.total;
+                newElement.total = (nextElement.total - currentElementTotal);
                 return newElement;
             });
             output.splice(-1,1);
