@@ -90,7 +90,7 @@
         { "month": "2020-10-01", "total": 2351 },
         { "month": "2020-11-01", "total": 2606 },
         { "month": "2020-12-01", "total": 3025 },
-        { "month": "2021-01-01", "total": 3477, "dayin": 136, "nightin": 130, "dayout": 18, "nightout": 6 },
+        { "month": "2021-01-01", "total": 3453, "dayin": 136, "nightin": 130, "dayout": 18, "nightout": 6 },
         { "month": "2021-02-01", "dayin": 282, "nightin": 290, "dayout": 123, "nightout": 78 }
     ],
     "gas":
