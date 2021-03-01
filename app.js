@@ -56,7 +56,7 @@ var app = new Vue({
             });
             this.energyData.electricity = output;
         },
-        calculateMonthlyTotals: function(type){
+       calculateMonthlyTotals: function(type){
             var data = this.energyData[type];
             var output = data.map(function(item, index){ 
                 var currentElement = data[index];
@@ -64,8 +64,14 @@ var app = new Vue({
                 if(!nextElement) return null;
                 var newElement = {};
                 newElement.month = nextElement.month;
-                var currentElementTotal = currentElement.newtotal ? currentElement.newtotal : currentElement.total;
-                newElement.total = (nextElement.total - currentElementTotal);
+                if(nextElement.total){
+                    newElement.total = nextElement.total - currentElement.total;
+                }
+                else{
+                    var currentElementTotal = currentElement.dayin + currentElement.nightin - currentElement.dayout - currentElement.nightout;
+                    var nextElementTotal = nextElement.dayin + nextElement.nightin - nextElement.dayout - nextElement.nightout;
+                    newElement.total = nextElementTotal - currentElementTotal;
+                }
                 return newElement;
             });
             output.splice(-1,1);
