@@ -68,8 +68,8 @@ var app = new Vue({
                     newElement.total = nextElement.total - currentElement.total;
                 }
                 else{
-                    var currentElementTotal = currentElement.dayin + currentElement.nightin - currentElement.dayout - currentElement.nightout;
-                    var nextElementTotal = nextElement.dayin + nextElement.nightin - nextElement.dayout - nextElement.nightout;
+                    var currentElementTotal = currentElement.dayin + currentElement.nightin ?? 0 - currentElement.dayout ?? 0 - currentElement.nightout ?? 0;
+                    var nextElementTotal = nextElement.dayin + nextElement.nightin ?? 0 - nextElement.dayout ?? 0 - nextElement.nightout ?? 0;
                     newElement.total = nextElementTotal - currentElementTotal;
                 }
                 return newElement;
