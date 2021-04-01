@@ -47,7 +47,8 @@
         { "month": "2020-11-01", "total": 201 },
         { "month": "2020-12-01", "total": 86 },
         { "month": "2021-01-01", "total": 89 },
-        { "month": "2021-02-01", "total": 300 }
+        { "month": "2021-02-01", "total": 300 },
+        { "month": "2021-03-01", "total": 474 }
     ],
     "electricity":
     [
@@ -91,7 +92,8 @@
         { "month": "2020-11-01", "total": 2606 },
         { "month": "2020-12-01", "total": 3025 },
         { "month": "2021-01-01", "total": 3453, "dayin": 136, "nightin": 130, "dayout": 18, "nightout": 6 },
-        { "month": "2021-02-01", "dayin": 282, "nightin": 290, "dayout": 123, "nightout": 78 }
+        { "month": "2021-02-01", "dayin": 282, "nightin": 290, "dayout": 123, "nightout": 78 },
+        { "month": "2021-03-01", "dayin": 429, "nightin": 431, "dayout": 329, "nightout": 160 }
     ],
     "gas":
     [
@@ -133,7 +135,8 @@
         { "month": "2020-11-01", "total": 6776 },
         { "month": "2020-12-01", "total": 6965 },
         { "month": "2021-01-01", "total": 7175, "dayin": 125 },
-        { "month": "2021-02-01", "dayin": 278 }
+        { "month": "2021-02-01", "dayin": 278 },
+        { "month": "2021-03-01", "dayin": 421 }
     ],
     "water":
     [
@@ -169,6 +172,7 @@
         { "month": "2020-11-01", "total": 453 },
         { "month": "2020-12-01", "total": 461 },
         { "month": "2021-01-01", "total": 469, "dayin": 469 },
-        { "month": "2021-02-01", "dayin": 476 }
+        { "month": "2021-02-01", "dayin": 476 },
+        { "month": "2021-02-01", "dayin": 482 }
     ]
 }
