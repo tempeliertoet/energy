@@ -51,7 +51,10 @@
         { "month": "2021-03-01", "total": 474 },
         { "month": "2021-04-01", "total": 560 },
         { "month": "2021-05-01", "total": 569 },
-        { "month": "2021-06-01", "total": 631 }
+        { "month": "2021-06-01", "total": 631 },
+        { "month": "2021-07-01", "total": 568 },
+        { "month": "2021-08-01", "total": 482 },
+        { "month": "2021-09-01", "total": 493 }
     ],
     "electricity":
     [
@@ -99,7 +102,10 @@
         { "month": "2021-03-01", "dayin": 429, "nightin": 431, "dayout": 329, "nightout": 160 },
         { "month": "2021-04-01", "dayin": 530, "nightin": 564, "dayout": 589, "nightout": 249 },
         { "month": "2021-05-01", "dayin": 603, "nightin": 702, "dayout": 834, "nightout": 353 },
-        { "month": "2021-06-01", "dayin": 669, "nightin": 863, "dayout": 1178, "nightout": 450 }
+        { "month": "2021-06-01", "dayin": 669, "nightin": 863, "dayout": 1178, "nightout": 450 },
+        { "month": "2021-07-01", "dayin": 738, "nightin": 1056, "dayout": 1450, "nightout": 557 },
+        { "month": "2021-08-01", "dayin": 803, "nightin": 1192, "dayout": 1677, "nightout": 651 },
+        { "month": "2021-09-01", "dayin": 881, "nightin": 1362, "dayout": 1936, "nightout": 742 }
     ],
     "gas":
     [
@@ -145,7 +151,10 @@
         { "month": "2021-03-01", "dayin": 421 },
         { "month": "2021-04-01", "dayin": 542 },
         { "month": "2021-05-01", "dayin": 607 },
-        { "month": "2021-06-01", "dayin": 634 }
+        { "month": "2021-06-01", "dayin": 634 },
+        { "month": "2021-07-01", "dayin": 660 },
+        { "month": "2021-08-01", "dayin": 685 },
+        { "month": "2021-09-01", "dayin": 709 }
     ],
     "water":
     [
@@ -185,6 +194,9 @@
         { "month": "2021-03-01", "dayin": 482 },
         { "month": "2021-04-01", "dayin": 489 },
         { "month": "2021-05-01", "dayin": 496 },
-        { "month": "2021-06-01", "dayin": 502 }
+        { "month": "2021-06-01", "dayin": 502 },
+        { "month": "2021-07-01", "dayin": 509 },
+        { "month": "2021-08-01", "dayin": 517 },
+        { "month": "2021-09-01", "dayin": 523 }
     ]
 }
