@@ -117,7 +117,7 @@
         { "month": "2021-12-01", "dayin": 1424, "nightin": 1876, "dayout": 2126, "nightout": 809 },
         { "month": "2022-01-01", "dayin": 1634, "nightin": 2064, "dayout": 2154, "nightout": 817 },
         { "month": "2022-02-01", "dayin": 1772, "nightin": 2202, "dayout": 2237, "nightout": 872 },
-        { "month": "2023-02-01", "dayin": 1876, "nightin": 2328, "dayout": 2513, "nightout": 971 }
+        { "month": "2022-03-01", "dayin": 1876, "nightin": 2328, "dayout": 2513, "nightout": 971 }
     ],
     "gas":
     [
@@ -220,7 +220,7 @@
         { "month": "2021-11-01", "dayin": 535 },
         { "month": "2021-12-01", "dayin": 541 },
         { "month": "2022-01-01", "dayin": 548 },
-        { "month": "2022-01-01", "dayin": 554 },
-        { "month": "2022-01-01", "dayin": 560 }
+        { "month": "2022-02-01", "dayin": 554 },
+        { "month": "2022-03-01", "dayin": 560 }
     ]
 }
