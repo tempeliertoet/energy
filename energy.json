@@ -121,7 +121,7 @@
         { "month": "2022-02-01", "dayin": 1772, "nightin": 2202, "dayout": 2237, "nightout": 872 },
         { "month": "2022-03-01", "dayin": 1876, "nightin": 2328, "dayout": 2513, "nightout": 971 },
         { "month": "2022-04-01", "dayin": 1962, "nightin": 2442, "dayout": 2751, "nightout": 1099 },
-        { "month": "2022-05-01", "dayin": 2015, "nightin": 2600, "dayout": 3237, "nightout": 1225 }
+        { "month": "2022-05-01", "dayin": 2018, "nightin": 2600, "dayout": 3038, "nightout": 1215 }
     ],
     "gas":
     [
