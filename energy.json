@@ -79,7 +79,8 @@
         { "month": "2023-07-01", "total": 542 },
         { "month": "2023-08-01", "total": 498 },
         { "month": "2023-09-01", "total": 503 },
-        { "month": "2023-10-01", "total": 281 }
+        { "month": "2023-10-01", "total": 281 },
+        { "month": "2023-11-01", "total": 125 }
     ],
     "electricity":
     [
@@ -155,7 +156,8 @@
         { "month": "2023-07-01", "dayin": 3394, "nightin": 4457, "dayout": 5863, "nightout": 2278 },
         { "month": "2023-08-01", "dayin": 3466, "nightin": 4556, "dayout": 6113, "nightout": 2339 },
         { "month": "2023-09-01", "dayin": 3550, "nightin": 4672, "dayout": 6346, "nightout": 2437 },
-        { "month": "2023-10-01", "dayin": 3667, "nightin": 4811, "dayout": 6452, "nightout": 2500 }
+        { "month": "2023-10-01", "dayin": 3667, "nightin": 4811, "dayout": 6452, "nightout": 2500 },
+        { "month": "2023-11-01", "dayin": 3859, "nightin": 4955, "dayout": 6494, "nightout": 2513 }
     ],
     "gas":
     [
@@ -229,7 +231,8 @@
         { "month": "2023-07-01", "dayin": 2566 },
         { "month": "2023-08-01", "dayin": 2592 },
         { "month": "2023-09-01", "dayin": 2617 },
-        { "month": "2023-10-01", "dayin": 2674 }
+        { "month": "2023-10-01", "dayin": 2674 },
+        { "month": "2023-11-01", "dayin": 2810 }
     ],
     "water":
     [
@@ -297,6 +300,7 @@
         { "month": "2023-07-01", "dayin": 659 },
         { "month": "2023-08-01", "dayin": 665 },
         { "month": "2023-09-01", "dayin": 671 },
-        { "month": "2023-10-01", "dayin": 678 }
+        { "month": "2023-10-01", "dayin": 678 },
+        { "month": "2023-11-01", "dayin": 683 }
     ]
 }
